@@ -1,0 +1,22 @@
+<mat-toolbar class="mat-elevation-z6" [style]="style" style="padding: 0px !important;">
+  <div class="mobile-menu"  style="width: 100%;">
+    <mat-icon style="border-radius:50%; padding:12px;" (click)="toggleSidebar()" class="clickable-icon">menu</mat-icon>
+    <span class="title" style="margin-left:1rem"><b>Bass</b> Waves</span>
+    <span class="example-spacer"></span>
+  </div>
+  <div class="desktop-menu-wrapper">
+    <div class="desktop-menu">
+      <div class="desktop-menu-item"><span (click)="openDialogSettings()">Configurações</span></div>
+      <a style="text-decoration: none;" href="https://bitbucket.org/tcc_up_2017/bwaves/src/master/" target="_blank">
+      <div class="desktop-menu-item"><span>Bitbucket</span></div>
+      </a>
+      <div class="desktop-menu-item"><span class="logo">Bass Waves</span></div>
+      <div class="desktop-menu-item"><span (click)="openDialogAbout()">Sobre</span></div>
+      <a style="text-decoration: none;" href="https://drive.google.com/open?id=1_sMnPeFg0noCtd4TDr-4hzzcxOEM9nC2" target="_blank">
+      <div class="desktop-menu-item"><span>Documentação</span></div>
+      </a>
+    </div>
+  </div>
+
+</mat-toolbar>
+

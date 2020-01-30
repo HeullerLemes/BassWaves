@@ -1,0 +1,63 @@
+<mat-card class="card">
+  <h6 class="card-title">
+    TABLATURA
+    <button mat-icon-button [matMenuTriggerFor]="menu" style="float: right;">
+      <mat-icon>more_vert</mat-icon>
+    </button>
+  </h6>
+  <div *ngIf="tablatura.compassos[0].cordaE.length > 0 && !isLoading" class="wrapper-cards" style="color:white; font-family:'courier'; padding-top:1rem; font-size:25px;">
+    <div *ngFor="let compasso of tablatura.compassos; let i = index">
+      <div>
+        <span><b>{{!reversed? 'E' : 'G'}}</b></span><b>|</b><span *ngFor="let nota of (!reversed ? compasso.cordaE : compasso.cordaG)" (click)="detalhesNota(nota)">
+          <span *ngIf="nota.isNota" matTooltip="
+            Clique para mais informações
+          ">{{nota.conteudo}}</span>
+          <span *ngIf="!nota.isNota"><span *ngIf="nota.conteudo === 'o'" matTooltip="Tempo Incorreto">{{nota.conteudo}}</span><span
+              *ngIf="nota.conteudo !== 'o'">{{nota.conteudo}}</span></span>
+        </span>
+        <b>|</b>
+      </div>
+      <div>
+        <span><b>{{!reversed? 'A' : 'D'}}</b></span><b>|</b><span *ngFor="let nota of (!reversed ? compasso.cordaA : compasso.cordaD)" (click)="detalhesNota(nota)"> <span
+            *ngIf="nota.isNota" matTooltip="
+          Clique para mais informações
+        ">{{nota.conteudo}}</span>
+          <span *ngIf="!nota.isNota"><span *ngIf="nota.conteudo === 'o'" matTooltip="Tempo Incorreto">{{nota.conteudo}}</span><span
+              *ngIf="nota.conteudo !== 'o'">{{nota.conteudo}}</span></span></span><b>|</b>
+      </div>
+      <div>
+        <span><b>{{!reversed? 'D' : 'A'}}</b></span><b>|</b><span *ngFor="let nota of (!reversed ? compasso.cordaD : compasso.cordaA)" (click)="detalhesNota(nota)"> <span
+            *ngIf="nota.isNota" matTooltip="
+          Clique para mais informações
+        ">{{nota.conteudo}}</span>
+          <span *ngIf="!nota.isNota"><span *ngIf="nota.conteudo === 'o'" matTooltip="Tempo Incorreto">{{nota.conteudo}}</span><span
+              *ngIf="nota.conteudo !== 'o'">{{nota.conteudo}}</span></span></span><b>|</b>
+      </div>
+      <div>
+        <span><b>{{!reversed? 'G' : 'E'}}</b></span><b>|</b><span *ngFor="let nota of (!reversed ? compasso.cordaG : compasso.cordaE)" (click)="detalhesNota(nota)"> <span
+            *ngIf="nota.isNota" matTooltip="
+          Clique para mais informações
+        ">{{nota.conteudo}}</span>
+          <span *ngIf="!nota.isNota"><span *ngIf="nota.conteudo === 'o'" matTooltip="Tempo Incorreto">{{nota.conteudo}}</span><span
+              *ngIf="nota.conteudo !== 'o'">{{nota.conteudo}}</span></span></span><b>|</b>
+      </div>
+      <br />
+    </div>
+  </div>
+
+  <div class="no-tabs" *ngIf="tablatura.compassos[0].cordaE.length === 0 && !isLoading">
+    Não há tablatura detectada. Para iniciar uma gravação, clique no botão "Gravar".
+  </div>
+  <div *ngIf="isLoading">
+    <mat-spinner style="margin:0 auto;  margin-top: 100px;"></mat-spinner>
+    <div class="load-text">
+      <span class="gerando-tab-text">Gerando Tablatura...<br />Por favor, aguarde.</span>
+    </div>
+  </div>
+</mat-card>
+
+<mat-menu #menu="matMenu">
+  <button mat-menu-item (click)="inverterTablatura()">
+    <span>Inverter Tablatura</span>
+  </button>
+</mat-menu>

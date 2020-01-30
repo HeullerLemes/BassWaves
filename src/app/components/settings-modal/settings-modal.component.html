@@ -1,0 +1,14 @@
+<h1 mat-dialog-title>Configurações</h1>
+<div mat-dialog-content>
+  <div class="container-settings">
+      <h3 class="label-container-settings">Metrônomo</h3>
+      <div class="checkbox-row">
+          <mat-checkbox [(ngModel)]="configuracoesAtuais.visualizacaoCards.visualizaMetronomoSimultaneo">Metrônomo simultâneo</mat-checkbox>
+        </div>
+  </div>
+
+
+</div>
+<div mat-dialog-actions>
+  <button mat-button [mat-dialog-close]="data.animal" (click)="updateConfigs()" cdkFocusInitial>Feito</button>
+</div>

@@ -1,0 +1,87 @@
+.clickable-icon {
+  cursor: pointer;
+  transition: all 0.5s ease;
+  opacity: .54;
+}
+
+.clickable-icon:hover {
+  background-color: rgba(0, 0, 0, 0.071);
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.clickable-icon {
+  cursor: pointer;
+  transition: all 0.5s ease;
+  opacity: .54;
+}
+
+.clickable-icon:hover {
+  background-color: rgba(0, 0, 0, 0.071);
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.title:hover {
+  cursor: pointer;
+  width: 300px;
+  color: aliceblue;
+  transition: all 3s ease;
+}
+
+@media only screen and (min-width: 1000px) {
+  .mobile-menu {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 999px) {
+  .desktop-menu-wrapper {
+    display: none;
+  }
+}
+
+.desktop-menu-wrapper {
+  font-family: 'Fjalla One', sans-serif;
+  background-color: #101012;
+  padding: 20px 0px 20px 0px;
+  width: 100%;
+  .desktop-menu {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    width: 60rem;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 100;
+    letter-spacing: 1px;
+    .desktop-menu-item{
+      color: #858587;
+      text-transform: uppercase;
+      -webkit-transition:  all 3s ease !important;
+      -moz-transition:  all 3s ease !important;
+      transition: all 3s ease !important;
+      cursor: pointer;
+      span:not(.logo){
+        &:hover{
+          font-size: 27px;
+          color: white;
+        }
+      }
+    }
+    .logo{
+      font-weight: bold;
+      color: white;
+      font-size: 35px;
+    }
+  }
+}
+
+
+.mat-toolbar-single-row{
+  padding: 0px;
+}

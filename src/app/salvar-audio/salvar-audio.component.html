@@ -1,0 +1,9 @@
+<div mat-dialog-content>
+  <p>Nome do arquivo:</p>
+  <mat-form-field style="width:100%;">
+    <input matInput [(ngModel)]="data.nome">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button [mat-dialog-close]="data.nome" cdkFocusInitial>Ok</button>
+</div>

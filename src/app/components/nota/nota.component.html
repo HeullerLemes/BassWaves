@@ -1,0 +1,23 @@
+<div class="note-componente-content">
+  <div style="padding-bottom:12px;">
+    <div class="nota"  style="height: 97px;">
+      <div *ngIf="hasSound">
+        <div class="frequencia">
+          <span>
+            {{notaAtual.nota}}
+          </span>
+        </div>
+        <div class="detune">
+            <span id="detuneAmount">{{notaAtual.detuneAmount}}</span>
+            <span *ngIf="notaAtual.detune=='flat'" id="flat">b</span>
+            <span *ngIf="notaAtual.detune=='sharp'" id="sharp">#</span>
+        </div>
+      </div>
+      <div *ngIf="!hasSound">
+        <span>
+          <mat-icon style="font-size:91px; width: auto; height: auto;">mic_off</mat-icon>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,90 @@
+@import 'variables';
+
+.card {
+  margin-top: 2rem;
+  transition: all 0.5s ease;
+  color: $text;
+  height: 22.9rem;
+}
+
+.card:hover {
+  -webkit-box-shadow: 0 0 0 0 transparent, 0 0 0 0 transparent, 0 2px 15px rgba(0, 0, 0, 0.30);
+  box-shadow: 0 0 0 0 transparent, 0 0 0 0 transparent, 0 2px 15px rgba(0, 0, 0, 0.30);
+}
+
+.card-title {
+  margin-bottom: 16px;
+  font-size: 20px;
+  font-weight: 100 !important;
+  font-family: 'Fjalla One', sans-serif;
+  letter-spacing: 1px;
+  color: white !important;
+}
+
+.wrapper-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-bottom: 2rem;
+  column-gap: 0px;
+  grid-auto-rows: 1fr;
+  max-height: 19.5rem;
+  overflow-y: scroll;
+}
+
+.semibreve {
+  background-color: #5F6268;
+}
+
+.minima {
+  background-color: #3D4047;
+}
+
+.semiminima {
+  color: black;
+  background-color: #1B1E27;
+  border-radius: 10px;
+
+}
+
+.colcheia {
+  color: black;
+  background-color: #5F6268;
+  border-radius: 10px;
+
+}
+
+.semicolcheia {
+  background-color: #3D4047;
+  border-radius: 10px;
+}
+
+.fusa {
+  background-color: #181A23;
+  border-radius: 10px;
+
+}
+
+.semifusa {
+  background-color: #080A0E;
+  border-radius: 10px;
+
+}
+
+.no-tabs {
+  font-family: 'Chakra Petch', sans-serif;
+  color: white;
+  font-weight: 100 !important;
+}
+
+.load-text {
+  width: 100%;
+  text-align: center;
+  margin-top: 45px;
+
+  .gerando-tab-text{
+
+    font-family: 'Chakra Petch', sans-serif;
+    color: white;
+    font-weight: 100 !important;
+  }
+}

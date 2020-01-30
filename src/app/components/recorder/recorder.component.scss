@@ -1,0 +1,81 @@
+button {
+  background-color: #768399;
+  margin-top: 25px;
+  margin-left: 10px;
+  text-align: center;
+  font-size: 10px;
+  margin-right: 12px;
+}
+
+mat-icon {
+  text-align: center;
+  font-size: 25px;
+  color: black;
+
+}
+.mat-iconUpload{
+  text-align: center;
+  font-size: 25px;
+  color: black;
+  transform: rotate(180deg);
+}
+
+
+.card-title {
+  margin-bottom: 16px;
+  font-size: 20px;
+  font-weight: 100 !important;
+  font-family: 'Fjalla One', sans-serif;
+  letter-spacing: 1px;
+  color: white !important;
+
+}
+
+@keyframes glowing {
+  0% {
+    box-shadow: 0 0 -10px red;
+  }
+
+  40% {
+    box-shadow: 0 0 20px red;
+  }
+
+  60% {
+    box-shadow: 0 0 20px red;
+  }
+
+  100% {
+    box-shadow: 0 0 -10px red;
+  }
+}
+
+.button-glow {
+  animation: glowing 1000ms infinite;
+}
+
+.wrapper-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  @media only screen and (max-width: 1000px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.wrapper-texto {
+  display: grid;
+  font-family: 'Chakra Petch', sans-serif;
+  grid-template-columns: 2fr 1fr;
+  color: white;
+  font-weight: 100 !important;
+  .mat-icon{
+    text-align: center;
+    width: auto;
+    color: #657082;
+    font-size: 70px !important;
+  }
+}
+
+.card{
+  cursor: pointer;
+}

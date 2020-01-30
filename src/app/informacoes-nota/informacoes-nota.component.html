@@ -1,0 +1,14 @@
+<h1 mat-dialog-title>Detalhes da Nota</h1>
+<div mat-dialog-content>
+    <div><b>Tipo: </b><span style="text-transform: capitalize">{{data.tipo}}</span></div>
+    <div><b>Duração: </b> <span style="text-transform: capitalize">{{formatNumber(data.tempo * 1000)}}</span> ms</div>
+    <div><b>Frequencia: </b><span style="text-transform: capitalize">{{data.frequencia}}Hz</span></div>
+    <div><b>Nota: </b><span style="text-transform: capitalize">{{data.nota}}</span></div>
+    <div><b>Casa: </b><span style="text-transform: capitalize">{{data.casa}}</span></div>
+    <div><b>Corda: </b><span style="text-transform: capitalize">{{data.corda}}</span></div>
+
+</div>
+<div mat-dialog-actions>
+
+  <button mat-button [mat-dialog-close]="data">OK</button>
+</div>

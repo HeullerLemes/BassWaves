@@ -1,0 +1,68 @@
+@import "variables";
+
+.card {
+  color: #768399;
+  margin: 0 auto;
+  margin-top: 2rem;
+  transition: all 0.5s ease;
+  padding-top: 16px;
+  -webkit-user-select: none;
+  /* Safari */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* IE10+/Edge */
+  user-select: none;
+
+  /* Standard */
+  .bpm-label {
+    color: #768399 !important;
+    margin: 0px;
+    padding-top: 1rem;
+    font-size: 14px;
+    margin-left: 1rem;
+  }
+}
+
+.card-title {
+  margin-bottom: 16px;
+  font-size: 12px;
+}
+
+.card:hover {
+  -webkit-box-shadow: 0 0 0 0 transparent, 0 0 0 0 transparent, 0 2px 15px rgba(0, 0, 0, 0.30);
+  box-shadow: 0 0 0 0 transparent, 0 0 0 0 transparent, 0 2px 15px rgba(0, 0, 0, 0.30);
+}
+
+mat-slider {
+  width: 100%;
+}
+
+button {
+  background-color: #768399;
+  float: right;
+  color: black;
+}
+
+.wrapper-card {
+  display: grid;
+  grid-template-columns: 32px 2fr 32px;
+  margin-bottom: 2rem;
+  column-gap: 0px;
+
+  div {
+    cursor: pointer;
+    color: #768399;
+  }
+}
+
+mat-icon {
+  -webkit-user-select: none;
+  /* Safari */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* IE10+/Edge */
+  user-select: none;
+  /* Standard */
+}

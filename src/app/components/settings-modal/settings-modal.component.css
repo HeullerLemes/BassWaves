@@ -1,0 +1,29 @@
+.mat-dialog-content{
+    overflow:unset;
+}
+.container-settings{
+    border-top: 1px solid rgba(0,0,0,0.15);
+    margin-top: 15px;
+    padding-top: 5px;
+}
+.label-container-settings{
+    color: rgba(0,0,0,.54);
+    font-size: 12px;
+    font-weight: normal;
+    margin: 0;
+    padding-top: 10px;
+    margin-bottom:1rem;
+}
+.mat-checkbox-label{
+    font-size: 13px !important;
+}
+.mat-checkbox-layout{
+    margin-bottom:1rem;
+}
+.checkbox-row{
+    margin-bottom:0.5rem;
+}
+
+.mat-checkbox-background{
+    background-color: #689F38 !important;
+}

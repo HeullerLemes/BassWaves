@@ -1,0 +1,60 @@
+<div class="container" [class.is-mobile]="mobileQuery.matches">
+	<app-toolbar [sideBar]="sideBar" isOpen="true"></app-toolbar>
+
+	<mat-sidenav-container class="sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 0 : 0">
+		<mat-sidenav [opened]="sideNavOpen" style="margin-bottom:-30px;" #sideBar [mode]="mobileQuery.matches ? 'over' : 'side'"
+		 [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
+			<mat-list style="width:15rem;">
+				<div class="container-sidebar">
+					<mat-list-item (click)="openDialogSettings()">
+						<mat-icon matListIcon>settings</mat-icon>
+						<p matLine> Configurações </p>
+					</mat-list-item>
+					<mat-list-item style="display: none" [routerLink]="['calibrar']" >
+						<mat-icon matListIcon>music_note</mat-icon>
+						<p matLine > Calibrar </p>
+					</mat-list-item>
+					<mat-list-item>
+						<mat-icon matListIcon>save</mat-icon>
+						<p matLine> Salvar sessão </p>
+					</mat-list-item>
+				</div>
+				<div class="container-sidebar">
+					<mat-list-item>
+						<mat-icon matListIcon>group</mat-icon>
+						<p matLine> Sobre</p>
+					</mat-list-item>
+					<mat-list-item>
+						<mat-icon matListIcon>cloud</mat-icon>
+						<p matLine> Bitbucket </p>
+					</mat-list-item>
+					<mat-list-item>
+						<mat-icon matListIcon>feedback</mat-icon>
+						<p matLine> Enviar feedback </p>
+					</mat-list-item>
+				</div>
+				<mat-list-item style="display: none">
+					<mat-icon  matListIcon>help</mat-icon>
+					<p matLine> Ajuda </p>
+				</mat-list-item>
+				<mat-list-item>
+					<mat-icon style="padding-right: 31px;" matListIcon>book</mat-icon>
+					<a style="text-decoration: none;" href="https://drive.google.com/open?id=1dnvCTRUq3pybPGkH9gWVCWNIykYF1XnM" target="_blank">
+					<p matLine style> Documentação (TCC) </p>
+				</a>
+				</mat-list-item>
+			</mat-list>
+
+		</mat-sidenav>
+		<mat-sidenav-content>
+      <div style="max-width:85%; margin: 0 auto; margin-top: 80px;">
+        <app-recorder></app-recorder>
+
+					<div class="wrapper-cards">
+              <app-tablatura-card></app-tablatura-card>
+              <app-metronomo-afinador-wrapper></app-metronomo-afinador-wrapper>
+						</div>
+			</div>
+		</mat-sidenav-content>
+	</mat-sidenav-container>
+</div>

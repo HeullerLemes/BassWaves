@@ -1,0 +1,42 @@
+.nota{
+    text-align: center;
+}
+
+.frequencia{
+    text-align: center;
+    font-size: 60px;
+}
+
+.detune{
+    text-align: center;
+}
+
+.detune_amount{
+    text-align: center;
+}
+
+.noSound{
+    text-align: center;
+    font-size: 30px;
+    padding-top: 26px;
+    color: #768399;
+}
+
+.card-title{
+    margin-bottom:16px;
+    font-size:12px;
+}
+
+.card{
+    margin:0 auto;
+    margin-top:2rem;
+    transition: all 0.5s ease;
+    padding-top:16px;
+    margin-right:5px;
+    padding-bottom: 16px;
+}
+
+.note-componente-content{
+    margin-top: 30px;
+    color: #768399;
+}

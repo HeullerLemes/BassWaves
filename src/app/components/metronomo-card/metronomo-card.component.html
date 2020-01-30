@@ -1,0 +1,13 @@
+<p style="margin:0px; padding-top:1rem; font-size:14px; margin-left:1rem;font-family: 'Fjalla One', sans-serif;">
+  <span class="bpm-label" style="font-size:40px;">{{tempo}}</span> BPM
+      <mat-icon (click)="play()" style="float: right; padding-right: 50px; font-size: 50px;">{{playButton}}</mat-icon>
+</p>
+<div class="wrapper-card">
+  <div style="float: right; padding-top:12px;" (click)="subtractBPM()">
+    <mat-icon>remove</mat-icon>
+  </div>
+  <mat-slider [(ngModel)]="tempo" (change)="atualizarBPM()" tickInterval="1" min="40" max="240"></mat-slider>
+  <div style="float:unset;padding-top:12px;" (click)="sumBPM()">
+    <mat-icon>add</mat-icon>
+  </div>
+</div>

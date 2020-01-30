@@ -1,0 +1,31 @@
+$bwaves-palette: (
+  'dark': (
+    '50': #ffebee,
+    '100': #ffcdd2,
+    '200': #ef9a9a,
+    '300': #e57373,
+    '400': #ef5350,
+    '500': #1B1E27,
+    '600': #2F3646,
+    '700': #2B323E,
+    '800': #c62828,
+    '900': #b71c1c,
+    'a100': #ff8a80,
+    'a200': #ff5252,
+    'a400': #ff1744,
+    'a700': #d50000,
+    'blue' : #3AB8FF,
+  )
+);
+
+$text: #768399;
+
+@function bwaves-palette($color-name, $color-variant: '500') {
+  $color: map-get(map-get($bwaves-palette, $color-name),$color-variant);
+  @if $color {
+    @return $color;
+  } @else {
+    @warn "=> ERROR: COLOR NOT FOUND! <= | Your $color-name, $color-variant combination did not match any of the values in the $material-colors map.";
+  }
+}
+

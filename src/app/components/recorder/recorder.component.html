@@ -1,0 +1,57 @@
+<div class="wrapper-3">
+  <mat-card class="card" [ngClass]="glowing" (click)="record()">
+    <h6 class="card-title">GRAVAR</h6>
+    <div class="wrapper-texto">
+      <div>
+        Clique para realizar a gravação do audio que deseja
+        gerar a tablatura (você poderá realizar o download
+        desse audio em seguida).
+      </div>
+      <div class="mat-icon">
+        <mat-icon>{{startButton}}</mat-icon>
+      </div>
+    </div>
+  </mat-card>
+
+  <mat-card class="card" (click)="fileInput.click()" id="file">
+    <h6 class="card-title">CARREGAR ÁUDIO</h6>
+    <div class="wrapper-texto">
+      <div>
+        Clique para realizar o upload do áudio
+        que deseja gerar tablatura.
+      </div>
+      <div class="mat-icon">
+        <mat-icon>file_upload</mat-icon>
+        <input id="my-file-selector" type="file" accept="audio/*" style="display:none;" (change)="onFileChange($event)"
+        #fileInput required>
+      </div>
+    </div>
+  </mat-card>
+
+  <mat-card class="card" (click)="downloadFile()" id="download">
+    <h6 class="card-title">BAIXAR ÁUDIO</h6>
+    <div class="wrapper-texto">
+      <div>
+        Clique para realizar o download do
+        audio gravado.
+      </div>
+      <div class="mat-icon">
+        <mat-icon>file_download</mat-icon>
+      </div>
+    </div>
+  </mat-card>
+<!--<canvas id="view1" width="32767" height="1000"></canvas>-->
+</div>
+
+    <!-- <h6 class="card-title">BAIXAR ÁUDIO</h6>
+    <button [ngClass]="glowing" matTooltip="Gravar/Stop" mat-fab color="" (click)="record()">
+      <mat-icon>{{startButton}} {{glowing}}</mat-icon>
+    </button>
+    <button matTooltip="File" mat-fab color="" (click)="fileInput.click()" id="file">
+      <mat-icon>file_upload</mat-icon>
+    </button>
+    <button matTooltip="Download" mat-fab color="" (click)="downloadFile()" id="download">
+      <mat-icon>file_download</mat-icon>
+    </button>
+    <input id="my-file-selector" type="file" accept="audio/*" style="display:none;" (change)="onFileChange($event)"
+      #fileInput required> -->
